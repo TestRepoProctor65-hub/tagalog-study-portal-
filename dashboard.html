@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Study Dashboard | Tagalog</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <header style="text-align: center;">
+            <h1>Tagalog Work Study Hub</h1>
+            
+            <div class="system-status" style="display: flex; gap: 30px; justify-content: center; margin-bottom: 20px; font-size: 0.85rem; font-family: monospace;">
+                <span id="homeworkTime" style="color: #d9534f; background: #fdf2f2; padding: 4px 8px; border-radius: 4px; border: 1px solid #d9534f;">Student Sync: --</span>
+                <span id="feedbackTime" style="color: #31708f; background: #d9edf7; padding: 4px 8px; border-radius: 4px; border: 1px solid #bce8f1;">Teacher Sync: --</span>
+            </div>
+
+            <button onclick="logout()" class="logout-btn">Logout</button>
+        </header>
+
+        <main class="study-grid">
+            <section class="submission-panel">
+                <div class="profile-header">
+                    <img src="images/LoLo.jpg" alt="Tay Michael" class="profile-photo">
+                    <div>
+                        <h3 style="margin:0;">Tay Michael's Homework</h3>
+                        <p style="margin:0; font-size: 0.8rem; color: #666;">Tagalog Student Portal</p>
+                    </div>
+                </div>
+                <textarea id="homeworkText" placeholder="Tay Michael, paste your grammar exercises here..."></textarea>
+                <button class="action-btn">Submit to Guro Mary</button>
+            </section>
+
+            <section class="feedback-panel">
+                <div class="workspace-header">
+                    <img src="images/Mary.jpg" alt="Teacher Portal" class="submission-banner">
+                    <h3 style="margin:0;">Guro Mary's Workspace</h3>
+                    <p style="margin:0 0 10px 0; font-size: 0.8rem; color: #666;">Assignments & Corrections</p>
+                </div>
+                <textarea id="teacherNotes" placeholder="Guro Mary, provide corrections here..."></textarea>
+                <button class="action-btn secondary">Post Feedback</button>
+            </section>
+        </main>
+    </div>
+
+    <script src="https://www.gstatic.com/firebasejs/9.22.1/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.1/firebase-database-compat.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
